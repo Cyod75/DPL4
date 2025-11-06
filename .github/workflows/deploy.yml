@@ -18,4 +18,6 @@ jobs:
           script: |
             cd /var/www/html/DPL4/
             git reset --hard; git pull
+            php artisan view:cache
+            php artisan route:cache
             npm run build
